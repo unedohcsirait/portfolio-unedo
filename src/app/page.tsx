@@ -118,18 +118,18 @@ export default function Home() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', position: 'relative' }}
+              style={{ flex: '1 1 300px', display: 'flex', justifyContent: 'center', position: 'relative', width: '100%' }}
             >
-              <div style={{ position: 'relative', width: '320px', height: '320px', zIndex: 2 }}>
+              <div style={{ position: 'relative', width: '100%', maxWidth: '320px', aspectRatio: '1/1', zIndex: 2 }}>
                 {/* Decorative Glow */}
                 <div style={{ position: 'absolute', inset: '-20px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%)', filter: 'blur(30px)', zIndex: -1 }}></div>
                 
                 {/* Floating Elements */}
-                <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} style={{ position: 'absolute', top: '10%', left: '-10%', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', padding: '1rem', borderRadius: '16px', border: '1px solid var(--glass-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 10 }}>
+                <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} style={{ position: 'absolute', top: '10%', left: '-5%', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', padding: '1rem', borderRadius: '16px', border: '1px solid var(--glass-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 10 }}>
                   <span style={{ fontSize: '1.5rem' }}>💻</span>
                 </motion.div>
                 
-                <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} style={{ position: 'absolute', bottom: '10%', right: '-10%', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', padding: '1rem', borderRadius: '16px', border: '1px solid var(--glass-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 10 }}>
+                <motion.div animate={{ y: [0, 20, 0] }} transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }} style={{ position: 'absolute', bottom: '10%', right: '-5%', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', padding: '1rem', borderRadius: '16px', border: '1px solid var(--glass-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 10 }}>
                   <span style={{ fontSize: '1.5rem' }}>🚀</span>
                 </motion.div>
 

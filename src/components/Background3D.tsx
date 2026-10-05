@@ -49,7 +49,7 @@ function StarBackground(props: any) {
 export default function Background3D() {
   return (
     <div style={{ position: "fixed", top: 0, left: 0, width: "100vw", height: "100vh", zIndex: 0, pointerEvents: "none" }}>
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]} gl={{ powerPreference: "high-performance", antialias: false }}>
         <StarBackground />
       </Canvas>
     </div>

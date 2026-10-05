@@ -5,10 +5,11 @@
 }
 
 .heroSection {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px; /* Offset for navbar */
+  padding-top: 120px; /* Larger offset for navbar on mobile */
+  padding-bottom: 4rem;
 }
 
 .heroContent {
