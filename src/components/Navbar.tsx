@@ -95,7 +95,7 @@ export default function Navbar() {
           whileTap={{ scale: 0.95 }}
         >
           <Link href="/" className={styles.logo} onClick={scrollToTop}>
-            <span className="text-gradient">{profile?.name || 'Unedo Sirait'}</span>
+            <span className={styles.rgbBreathe}>{profile?.name || 'Unedo Sirait'}</span>
           </Link>
         </motion.div>
         
@@ -103,12 +103,13 @@ export default function Navbar() {
           {['about', 'skills', 'projects', 'experience'].map((item, i) => (
             <motion.a 
               key={item}
+              className={styles.rgbBreathe}
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.05 * (i + 1) }}
-              whileHover={{ scale: 1.1, color: 'var(--accent-1)' }}
+              whileHover={{ scale: 1.1, filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.5))' }}
               whileTap={{ scale: 0.95 }}
-              style={{cursor: 'pointer', textTransform: 'capitalize'}} 
+              style={{cursor: 'pointer', textTransform: 'capitalize', animationDelay: `-${i * 1.5}s`}} 
               onClick={(e) => handleScroll(e, item)}
             >
               {item}
@@ -117,29 +118,35 @@ export default function Navbar() {
         </nav>
         <div className={styles.socials}>
           <motion.a 
+            className={styles.rgbRandom}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 400, delay: 0.2 }}
-            whileHover={{ scale: 1.2, rotate: 10, color: 'var(--accent-1)' }}
+            whileHover={{ scale: 1.2, rotate: 10, filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.5))' }}
             whileTap={{ scale: 0.9 }}
+            style={{ animationDelay: '-6s' }}
             href="https://github.com/unedohcsirait/" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"></path></svg>
           </motion.a>
           <motion.a 
+            className={styles.rgbRandom}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 400, delay: 0.25 }}
-            whileHover={{ scale: 1.2, rotate: -10, color: 'var(--accent-2)' }}
+            whileHover={{ scale: 1.2, rotate: -10, filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.5))' }}
             whileTap={{ scale: 0.9 }}
+            style={{ animationDelay: '-7.5s' }}
             href="https://www.linkedin.com/in/unedo-hc-sirait" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
           </motion.a>
           <motion.a 
+            className={styles.rgbRandom}
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ type: "spring", stiffness: 400, delay: 0.3 }}
-            whileHover={{ scale: 1.2, rotate: 10, color: '#25D366' }}
+            whileHover={{ scale: 1.2, rotate: 10, filter: 'drop-shadow(0 0 5px rgba(255,255,255,0.5))' }}
             whileTap={{ scale: 0.9 }}
+            style={{ animationDelay: '-9s' }}
             href="https://wa.me/6281373028553" target="_blank" rel="noopener noreferrer">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
           </motion.a>
@@ -165,12 +172,13 @@ export default function Navbar() {
             className={`${styles.mobileMenu} ${styles.open}`}
           >
             <nav className={styles.navLinks} style={{ display: 'flex' }}>
-              {['about', 'skills', 'projects', 'experience'].map((item) => (
+              {['about', 'skills', 'projects', 'experience'].map((item, i) => (
                 <motion.a 
                   key={item}
-                  whileHover={{ scale: 1.1, color: 'var(--accent-1)' }}
+                  className={styles.rgbBreathe}
+                  whileHover={{ scale: 1.1, filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.5))' }}
                   whileTap={{ scale: 0.95 }}
-                  style={{cursor: 'pointer', textTransform: 'capitalize'}} 
+                  style={{cursor: 'pointer', textTransform: 'capitalize', animationDelay: `-${i * 1.5}s`}} 
                   onClick={(e) => handleScroll(e, item)}
                 >
                   {item}
@@ -178,13 +186,13 @@ export default function Navbar() {
               ))}
             </nav>
             <div className={styles.socials} style={{ display: 'flex' }}>
-              <a href="https://github.com/unedohcsirait" target="_blank" rel="noopener noreferrer">
+              <a className={styles.rgbRandom} style={{ animationDelay: '-6s' }} href="https://github.com/unedohcsirait" target="_blank" rel="noopener noreferrer">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.02c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A4.8 4.8 0 0 0 8 18v4"></path></svg>
               </a>
-              <a href="https://www.linkedin.com/in/unedo-hc-sirait" target="_blank" rel="noopener noreferrer">
+              <a className={styles.rgbRandom} style={{ animationDelay: '-7.5s' }} href="https://www.linkedin.com/in/unedo-hc-sirait" target="_blank" rel="noopener noreferrer">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
               </a>
-              <a href="https://wa.me/6281373028553" target="_blank" rel="noopener noreferrer">
+              <a className={styles.rgbRandom} style={{ animationDelay: '-9s' }} href="https://wa.me/6281373028553" target="_blank" rel="noopener noreferrer">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
               </a>
             </div>
