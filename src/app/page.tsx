@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Background3D from "@/components/Background3D";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { getProjects, getExperiences, getProfile } from "./db-actions";
+import { getProjects, getExperiences, getProfile, incrementProfileViews } from "./db-actions";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -23,6 +23,9 @@ export default function Home() {
         
         const dbExperiences = await getExperiences();
         if (dbExperiences.length > 0) setExperiences(dbExperiences);
+
+        // Increment views in background
+        incrementProfileViews();
       } catch (err) {
         console.error("Failed to fetch from DB:", err);
       }

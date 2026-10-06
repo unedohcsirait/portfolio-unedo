@@ -64,3 +64,16 @@ export async function updateProfileAction(
   `;
   return data[0];
 }
+
+export async function incrementProfileViews() {
+  try {
+    await sql`ALTER TABLE profile ADD COLUMN IF NOT EXISTS views INT DEFAULT 0;`;
+    const data = await sql`
+      UPDATE profile SET views = COALESCE(views, 0) + 1 WHERE id = 1 RETURNING views;
+    `;
+    return data[0]?.views;
+  } catch (e) {
+    console.error("Error incrementing views", e);
+    return 0;
+  }
+}
