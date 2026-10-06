@@ -36,7 +36,7 @@ function StarBackground(props: any) {
       <Points ref={ref} positions={sphere as Float32Array} stride={3} frustumCulled={false} {...props}>
         <PointMaterial
           transparent
-          color="#ffffff"
+          color="#00f3ff"
           size={0.002}
           sizeAttenuation={true}
           depthWrite={false}

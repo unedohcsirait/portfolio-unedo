@@ -12,14 +12,9 @@
 }
 
 @keyframes rgb-color {
-  0% { color: #ff0000; }
-  14% { color: #ff7f00; }
-  28% { color: #ffff00; }
-  42% { color: #00ff00; }
-  57% { color: #0000ff; }
-  71% { color: #4b0082; }
-  85% { color: #9400d3; }
-  100% { color: #ff0000; }
+  0% { color: #00f3ff; }
+  50% { color: #ff007f; }
+  100% { color: #00f3ff; }
 }
 
 .rgbColor {
@@ -41,18 +36,13 @@
 .logoText {
   background: linear-gradient(
     90deg, 
-    #ff0000, #ff4000, #ff8000, #ffbf00, 
-    #ffff00, #bfff00, #80ff00, #40ff00, 
-    #00ff00, #00ff40, #00ff80, #00ffbf, 
-    #00ffff, #00bfff, #0080ff, #0040ff, 
-    #0000ff, #4000ff, #8000ff, #bf00ff, 
-    #ff00ff, #ff00bf, #ff0080, #ff0040, 
-    #ff0000
+    #00f3ff, #ff007f, #00f3ff, #ff007f, 
+    #00f3ff
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rgb-text 20s linear infinite;
+  animation: rgb-text 10s linear infinite;
 }
 
 @keyframes rgb-text {
@@ -64,25 +54,18 @@
 .rgbText {
   background: linear-gradient(
     90deg, 
-    #ff0000, #ff4000, #ff8000, #ffbf00, 
-    #ffff00, #bfff00, #80ff00, #40ff00, 
-    #00ff00, #00ff40, #00ff80, #00ffbf, 
-    #00ffff, #00bfff, #0080ff, #0040ff, 
-    #0000ff, #4000ff, #8000ff, #bf00ff, 
-    #ff00ff, #ff00bf, #ff0080, #ff0040, 
-    #ff0000
+    #00f3ff, #ff007f, #00f3ff, #ff007f, 
+    #00f3ff
   );
   background-size: 300% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rgb-text 20s linear infinite;
+  animation: rgb-text 10s linear infinite;
 }
 
 @keyframes breathe {
   0% { color: #ff007f; text-shadow: 0 0 5px #ff007f; }
-  25% { color: #00ffff; text-shadow: 0 0 15px #00ffff; }
-  50% { color: #7fff00; text-shadow: 0 0 5px #7fff00; }
-  75% { color: #bf00ff; text-shadow: 0 0 15px #bf00ff; }
+  50% { color: #00f3ff; text-shadow: 0 0 15px #00f3ff; }
   100% { color: #ff007f; text-shadow: 0 0 5px #ff007f; }
 }
 
@@ -91,18 +74,14 @@
 }
 
 @keyframes random-fade {
-  0% { color: #ff0000; filter: drop-shadow(0 0 5px #ff0000); }
-  15% { color: #ff8c00; filter: drop-shadow(0 0 1px #ff8c00); }
-  35% { color: #00ffaa; filter: drop-shadow(0 0 10px #00ffaa); }
-  50% { color: #0000ff; filter: drop-shadow(0 0 2px #0000ff); }
-  70% { color: #ff00ff; filter: drop-shadow(0 0 10px #ff00ff); }
-  85% { color: #ffff00; filter: drop-shadow(0 0 2px #ffff00); }
-  100% { color: #ff0000; filter: drop-shadow(0 0 5px #ff0000); }
+  0% { color: #00f3ff; filter: drop-shadow(0 0 5px #00f3ff); }
+  50% { color: #ff007f; filter: drop-shadow(0 0 10px #ff007f); }
+  100% { color: #00f3ff; filter: drop-shadow(0 0 5px #00f3ff); }
 }
 
 a.rgbRandom, .socials a.rgbRandom {
-  color: #ff0000 !important;
-  animation: random-fade 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  color: #00f3ff !important;
+  animation: random-fade 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .navLinks {

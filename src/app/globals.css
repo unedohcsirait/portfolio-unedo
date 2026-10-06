@@ -5,8 +5,8 @@
   --bg-secondary: #121212;
   --text-primary: #ffffff;
   --text-secondary: #a0a0a0;
-  --accent-1: #6366f1;
-  --accent-2: #ec4899;
+  --accent-1: #00f3ff;
+  --accent-2: #ff007f;
   --glass-bg: rgba(255, 255, 255, 0.05);
   --glass-border: rgba(255, 255, 255, 0.1);
 }
@@ -71,13 +71,19 @@ a {
   background-clip: text;
 }
 
-/* UI Elements */
+@keyframes shadow-walk {
+  0% { box-shadow: 0 0 10px rgba(0, 243, 255, 0.4), inset 0 0 5px rgba(0, 243, 255, 0.2); border-color: rgba(0, 243, 255, 0.5); }
+  50% { box-shadow: 0 0 15px rgba(255, 0, 127, 0.4), inset 0 0 10px rgba(255, 0, 127, 0.2); border-color: rgba(255, 0, 127, 0.5); }
+  100% { box-shadow: 0 0 10px rgba(0, 243, 255, 0.4), inset 0 0 5px rgba(0, 243, 255, 0.2); border-color: rgba(0, 243, 255, 0.5); }
+}
+
 .glass-panel {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
+  animation: shadow-walk 4s infinite alternate ease-in-out;
 }
 
 .btn-primary {

@@ -77,9 +77,9 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', padding: '0.5rem 1rem', borderRadius: '50px', marginBottom: '1.5rem' }}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(0, 243, 255, 0.1)', border: '1px solid rgba(0, 243, 255, 0.3)', padding: '0.5rem 1rem', borderRadius: '50px', marginBottom: '1.5rem' }}
               >
-                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#10b981', boxShadow: '0 0 10px #10b981' }}></div>
+                <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#00f3ff', boxShadow: '0 0 10px #00f3ff' }}></div>
                 <span style={{ fontSize: '0.85rem', fontWeight: 600, color: 'var(--accent-1)', letterSpacing: '0.5px' }}>Available for Work</span>
               </motion.div>
               
@@ -94,7 +94,7 @@ export default function Home() {
               
               <div className={styles.actions} style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
                 <motion.button 
-                  whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(99, 102, 241, 0.4)' }}
+                  whileHover={{ scale: 1.05, boxShadow: '0 0 20px rgba(0, 243, 255, 0.4)' }}
                   whileTap={{ scale: 0.95 }}
                   className="btn-primary" 
                   onClick={(e: any) => customScroll(e, 'projects')} 
@@ -125,7 +125,7 @@ export default function Home() {
             >
               <div style={{ position: 'relative', width: '100%', maxWidth: '320px', aspectRatio: '1/1', zIndex: 2 }}>
                 {/* Decorative Glow */}
-                <div style={{ position: 'absolute', inset: '-20px', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.4) 0%, transparent 70%)', filter: 'blur(30px)', zIndex: -1 }}></div>
+                <div style={{ position: 'absolute', inset: '-20px', background: 'radial-gradient(circle, rgba(0, 243, 255, 0.4) 0%, transparent 70%)', filter: 'blur(30px)', zIndex: -1 }}></div>
                 
                 {/* Floating Elements */}
                 <motion.div animate={{ y: [0, -15, 0] }} transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }} style={{ position: 'absolute', top: '10%', left: '-5%', background: 'var(--glass-bg)', backdropFilter: 'blur(10px)', padding: '1rem', borderRadius: '16px', border: '1px solid var(--glass-border)', boxShadow: '0 10px 30px rgba(0,0,0,0.5)', zIndex: 10 }}>
@@ -157,12 +157,12 @@ export default function Home() {
               {/* Profile Card */}
               <motion.div 
                 initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.1 }}
-                className="glass-panel" 
-                style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden' }}
+                className="glass-panel"
+                style={{ padding: '3rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', justifyContent: 'center', position: 'relative', overflow: 'hidden', animationDelay: '-1s' }}
               >
                 <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--accent-1)', filter: 'blur(80px)', opacity: 0.2 }}></div>
                 
-                <motion.div whileHover={{ scale: 1.05 }} className={styles.gradientBorder} style={{ width: '160px', height: '160px', borderRadius: '50%', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <motion.div whileHover={{ scale: 1.05 }} className={styles.gradientBorder} style={{ width: '240px', height: '240px', borderRadius: '0 50% 0 50%', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <img src="/profile.jpg" alt="Unedo H.C. Sirait" />
                 </motion.div>
                 
@@ -183,8 +183,8 @@ export default function Home() {
               {/* Details Card */}
               <motion.div 
                 initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}
-                className="glass-panel" 
-                style={{ padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative' }}
+                className="glass-panel"
+                style={{ padding: '3rem', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', animationDelay: '-3s' }}
               >
                 <h3 style={{ fontSize: '1.5rem', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                   <span style={{ color: 'var(--accent-1)' }}>✨</span> My Journey
@@ -200,8 +200,8 @@ export default function Home() {
                     { icon: '🤖', text: 'Exploring AI & Machine Learning' },
                     { icon: '⚡', text: 'Fun fact: I turn coffee into code!' }
                   ].map((item, i) => (
-                    <motion.div key={i} whileHover={{ x: 5 }} style={{ display: 'flex', gap: '1rem', alignItems: 'center', background: 'rgba(255,255,255,0.02)', padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                      <span style={{ fontSize: '1.2rem', background: 'rgba(99, 102, 241, 0.1)', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px' }}>{item.icon}</span> 
+                    <motion.div key={i} whileHover={{ x: 5 }} className="glass-panel" style={{ display: 'flex', gap: '1rem', alignItems: 'center', padding: '0.8rem 1rem', animationDelay: `-${i * 0.7}s` }}>
+                      <span style={{ fontSize: '1.2rem', background: 'rgba(0, 243, 255, 0.1)', width: '40px', height: '40px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderRadius: '8px' }}>{item.icon}</span> 
                       <span style={{ color: 'var(--text-primary)', fontWeight: 500 }}>{item.text}</span>
                     </motion.div>
                   ))}
@@ -217,7 +217,7 @@ export default function Home() {
             <h2 className={styles.sectionTitle}>Featured <span className="text-gradient">Projects</span></h2>
             <div className={styles.projectGrid}>
               {projects.map((proj: any, i: number) => (
-                <div key={proj.id || i} className="glass-panel" style={{ padding: '2rem', height: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', transition: 'transform 0.3s ease' }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
+                <div key={proj.id || i} className="glass-panel" style={{ padding: '2rem', height: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', transition: 'transform 0.3s ease', animationDelay: `-${i * 1.5}s` }} onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-10px)'} onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
                   <h3 style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>{proj.title}</h3>
                   <p style={{ color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: 1.5 }}>{proj.desc}</p>
                   <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '1.5rem' }}>
@@ -242,27 +242,57 @@ export default function Home() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem', maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
               <div>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>💻 Languages</h3>
-                <img src="https://skillicons.dev/icons?i=js,ts,python,php,html,css" alt="Languages" style={{ maxWidth: '100%' }} />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
+                  {['js', 'ts', 'python', 'php', 'html', 'css'].map((icon, i) => (
+                    <motion.div key={icon} whileHover={{ y: -5 }} className="glass-panel" style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', animationDelay: `-${i * 0.4}s` }}>
+                      <img src={`https://skillicons.dev/icons?i=${icon}`} alt={icon} style={{ width: '50px', height: '50px' }} />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               <div>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>⚛️ Frontend</h3>
-                <img src="https://skillicons.dev/icons?i=react,nextjs,tailwind" alt="Frontend" style={{ maxWidth: '100%' }} />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
+                  {['react', 'nextjs', 'tailwind'].map((icon, i) => (
+                    <motion.div key={icon} whileHover={{ y: -5 }} className="glass-panel" style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', animationDelay: `-${(i+2) * 0.5}s` }}>
+                      <img src={`https://skillicons.dev/icons?i=${icon}`} alt={icon} style={{ width: '50px', height: '50px' }} />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               <div>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>🖥️ Backend & Database</h3>
-                <img src="https://skillicons.dev/icons?i=nodejs,express,postgres,mysql" alt="Backend" style={{ maxWidth: '100%' }} />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
+                  {['nodejs', 'express', 'postgres', 'mysql'].map((icon, i) => (
+                    <motion.div key={icon} whileHover={{ y: -5 }} className="glass-panel" style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', animationDelay: `-${(i+1) * 0.6}s` }}>
+                      <img src={`https://skillicons.dev/icons?i=${icon}`} alt={icon} style={{ width: '50px', height: '50px' }} />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               <div>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>🤖 AI / Data Science</h3>
-                <img src="https://skillicons.dev/icons?i=python,tensorflow,pytorch" alt="AI Data Science" style={{ maxWidth: '100%' }} />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
+                  {['python', 'tensorflow', 'pytorch'].map((icon, i) => (
+                    <motion.div key={icon} whileHover={{ y: -5 }} className="glass-panel" style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', animationDelay: `-${(i+3) * 0.4}s` }}>
+                      <img src={`https://skillicons.dev/icons?i=${icon}`} alt={icon} style={{ width: '50px', height: '50px' }} />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
 
               <div>
                 <h3 style={{ marginBottom: '1.5rem', color: 'var(--text-secondary)' }}>🔧 Tools</h3>
-                <img src="https://skillicons.dev/icons?i=git,github,vscode,postman,docker" alt="Tools" style={{ maxWidth: '100%' }} />
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'center' }}>
+                  {['git', 'github', 'vscode', 'postman', 'docker'].map((icon, i) => (
+                    <motion.div key={icon} whileHover={{ y: -5 }} className="glass-panel" style={{ padding: '1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', animationDelay: `-${(i+4) * 0.3}s` }}>
+                      <img src={`https://skillicons.dev/icons?i=${icon}`} alt={icon} style={{ width: '50px', height: '50px' }} />
+                    </motion.div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -274,7 +304,7 @@ export default function Home() {
             <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Experience & <span className="text-gradient">Education</span></h2>
             <div style={{ maxWidth: '900px', margin: '0 auto', position: 'relative', marginTop: '3rem' }}>
               {/* Timeline Line */}
-              <div style={{ position: 'absolute', left: '24px', top: '10px', bottom: '0', width: '2px', background: 'linear-gradient(to bottom, var(--accent-1), rgba(99, 102, 241, 0.05))' }}></div>
+              <div style={{ position: 'absolute', left: '24px', top: '10px', bottom: '0', width: '2px', background: 'linear-gradient(to bottom, var(--accent-1), rgba(0, 243, 255, 0.05))' }}></div>
               
               {experiences.map((exp: any, index: number) => (
                 <motion.div 
@@ -286,20 +316,20 @@ export default function Home() {
                   style={{ position: 'relative', paddingLeft: '5.5rem', paddingBottom: '3rem' }}
                 >
                   {/* Timeline Dot */}
-                  <div style={{ position: 'absolute', left: '11px', top: '1.5rem', width: '28px', height: '28px', borderRadius: '50%', background: 'var(--bg-primary)', border: '2px solid var(--accent-1)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 15px rgba(99, 102, 241, 0.4)', zIndex: 2 }}>
+                  <div style={{ position: 'absolute', left: '11px', top: '1.5rem', width: '28px', height: '28px', borderRadius: '50%', background: 'var(--bg-primary)', border: '2px solid var(--accent-1)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 15px rgba(0, 243, 255, 0.4)', zIndex: 2 }}>
                     <div style={{ width: '10px', height: '10px', borderRadius: '50%', background: 'var(--accent-1)' }}></div>
                   </div>
                   
                   {/* Card Content */}
-                  <div className="glass-panel" style={{ padding: '2rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'default' }} 
-                       onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(99, 102, 241, 0.15)' }} 
+                  <div className="glass-panel" style={{ padding: '2rem', transition: 'transform 0.3s ease, box-shadow 0.3s ease', cursor: 'default', animationDelay: `-${index * 1.2}s` }} 
+                       onMouseEnter={(e) => { e.currentTarget.style.transform = 'translateY(-5px)'; e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 243, 255, 0.15)' }} 
                        onMouseLeave={(e) => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = 'none' }}>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem', gap: '1rem' }}>
                       <div>
                         <h3 style={{ fontSize: '1.4rem', fontWeight: 700, marginBottom: '0.25rem', color: 'var(--text-primary)' }}>{exp.role}</h3>
                         <h4 style={{ color: 'var(--accent-1)', fontWeight: 600, fontSize: '1.05rem', letterSpacing: '0.5px' }}>{exp.company}</h4>
                       </div>
-                      <span style={{ background: 'rgba(236, 72, 153, 0.1)', color: 'var(--accent-2)', padding: '0.4rem 1rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 700, border: '1px solid rgba(236, 72, 153, 0.2)' }}>
+                      <span style={{ background: 'rgba(255, 0, 127, 0.1)', color: 'var(--accent-2)', padding: '0.4rem 1rem', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 700, border: '1px solid rgba(255, 0, 127, 0.2)' }}>
                         {exp.year}
                       </span>
                     </div>

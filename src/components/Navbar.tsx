@@ -91,7 +91,7 @@ export default function Navbar() {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3, delay: 0.05 }}
-          whileHover={{ scale: 1.05, filter: "drop-shadow(0px 0px 8px rgba(99, 102, 241, 0.8))" }}
+          whileHover={{ scale: 1.05, filter: "drop-shadow(0px 0px 8px rgba(0, 243, 255, 0.8))" }}
           whileTap={{ scale: 0.95 }}
         >
           <Link href="/" className={styles.logo} onClick={scrollToTop}>
