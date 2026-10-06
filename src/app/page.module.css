@@ -74,15 +74,15 @@
 .gradientBorder {
   background: linear-gradient(
     45deg,
-    #00f3ff, #7b2cbf, #ff007f, #39ff14, 
-    #ff5722, #6f00ff, #00f3ff
+    #00f3ff, #ff007f, #00f3ff, #ff007f,
+    #00f3ff
   );
   background-size: 300% 300%;
   animation: gradient-walk 6s linear infinite;
   padding: 4px;
   border: 4px solid var(--glass-border);
   overflow: hidden;
-  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 0 30px rgba(0, 243, 255, 0.5), 0 0 15px rgba(255, 0, 127, 0.3);
 }
 
 .gradientBorder img {
