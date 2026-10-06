@@ -138,7 +138,7 @@ export default function Home() {
 
                 {/* Profile Image Wrapper */}
                 <div className={styles.gradientBorder} style={{ width: '100%', height: '100%', position: 'relative', zIndex: 1, borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }}>
-                  <img src="/profile.jpg" alt="Profile" />
+                  <img src="/neon-akaza-demon-5120x2880-17589.png" alt="Profile" />
                 </div>
               </div>
             </motion.div>
