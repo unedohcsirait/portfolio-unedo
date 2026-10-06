@@ -70,3 +70,30 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
+
+.gradientBorder {
+  background: linear-gradient(
+    45deg,
+    #00f3ff, #7b2cbf, #ff007f, #39ff14, 
+    #ff5722, #6f00ff, #00f3ff
+  );
+  background-size: 300% 300%;
+  animation: gradient-walk 6s linear infinite;
+  padding: 4px;
+  border: 4px solid var(--glass-border);
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+}
+
+.gradientBorder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+@keyframes gradient-walk {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}

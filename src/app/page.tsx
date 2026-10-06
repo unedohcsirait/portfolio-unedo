@@ -137,8 +137,8 @@ export default function Home() {
                 </motion.div>
 
                 {/* Profile Image Wrapper */}
-                <div style={{ width: '100%', height: '100%', borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%', overflow: 'hidden', border: '4px solid var(--glass-border)', background: 'linear-gradient(135deg, var(--accent-1), var(--accent-2))', padding: '4px' }}>
-                  <img src="/profile.jpg" alt="Profile" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 'inherit' }} />
+                <div className={styles.gradientBorder} style={{ width: '100%', height: '100%', position: 'relative', zIndex: 1, borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%' }}>
+                  <img src="/profile.jpg" alt="Profile" />
                 </div>
               </div>
             </motion.div>
@@ -162,8 +162,8 @@ export default function Home() {
               >
                 <div style={{ position: 'absolute', top: '-50px', right: '-50px', width: '150px', height: '150px', background: 'var(--accent-1)', filter: 'blur(80px)', opacity: 0.2 }}></div>
                 
-                <motion.div whileHover={{ scale: 1.05 }} style={{ width: '160px', height: '160px', borderRadius: '50%', overflow: 'hidden', border: '4px solid var(--accent-1)', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 25px rgba(99, 102, 241, 0.4)' }}>
-                  <img src="/profile.jpg" alt="Unedo H.C. Sirait" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                <motion.div whileHover={{ scale: 1.05 }} className={styles.gradientBorder} style={{ width: '160px', height: '160px', borderRadius: '50%', marginBottom: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <img src="/profile.jpg" alt="Unedo H.C. Sirait" />
                 </motion.div>
                 
                 <h3 style={{ fontSize: '1.8rem', marginBottom: '0.5rem', fontWeight: 800 }}>{profile?.name || 'Unedo H.C. Sirait'}</h3>
